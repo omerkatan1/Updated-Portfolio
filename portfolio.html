@@ -18,9 +18,6 @@
 
     <!-- linking jQuery -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-
-    <!-- linking portfolio js -->
-    <script src="Assets/portfolio.js"></script>
 </head>
 
 
@@ -94,16 +91,8 @@
                     <div id="pageContentBox-content" class="col-12">
 
 
-                        <!-- Row 1 -->
+                        <!-- Holds portfolio -->
                         <div id="portfolioHolder" class="row">
-
-                            <!-- Img 1 -->
-                            <div id="portfolioImg" class="col-xl-5 col-lg-6 col-md-6 col-sm-12">
-                                <a href="" target="_blank"><img class="imgResize" src=""></a>
-                                <div id="portfolioImgBar">
-                                    <h2 class="portfolioImgText">Hangman</h2>
-                                </div>
-                            </div>
 
                         </div>
 
@@ -120,6 +109,45 @@
     </div>
 
 
+
+
+
+    <script>
+        let portfolioArrayImg = ["Assets/Images/IMG_0204.jpg"];
+        let portfolioArrayLink = ["https://omerkatan1.github.io/project-1/"];
+        let portfolioArrayName = ["RouteMapper"];
+
+
+        for (var i = 0; i < portfolioArrayLink.length; i++) {
+            const portfolioBox = $("<div>");
+            portfolioBox.attr("id", "portfolioImg");
+            portfolioBox.addClass("col-xl-5 col-lg-6 col-md-6 col-sm-12");
+
+            const link = $("<a>");
+            const img = $("<img>");
+            link.attr("href", portfolioArrayLink[i]);
+            link.attr("target", "_blank");
+            img.addClass("imgResize");
+            img.attr("src", portfolioArrayImg[i]);
+
+            link.append(img);
+            portfolioBox.append(link);
+
+
+            const titleBar = $("<div>");
+            const title = $("<h2>");
+            titleBar.attr("id", "portfolioImgBar");
+            title.addClass("portfolioImgText");
+            title.text(portfolioArrayName[i]);
+
+            titleBar.append(title);
+            portfolioBox.append(titleBar);
+
+            $("#portfolioHolder").append(portfolioBox);
+
+        }
+
+    </script>
 
 
 </body>
