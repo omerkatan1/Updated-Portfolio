@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Meta data required for bootstrap -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- linking css bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- linking main css file -->
+    <link rel="stylesheet" href="Assets/style.css" type="text/css">
+
+    <!-- linking reset css -->
+    <link rel="stylesheet" href="reset.css" type="text/css">
+</head>
+
+
+
+<body>
+
+    <!-- Nav Bar header -->
+    <div class="container-fluid">
+
+        <div id="headerBar" class="row">
+
+            <!-- Blank Space -->
+            <div class="col-xl-2 col-lg-0 col-md-0 col-sm-0 col-0"></div>
+
+            <!-- Header Name Box -->
+            <div id="headerNameBox" class="col-xl-2 col-lg-3 col-md-4 col-sm-12 col-12">
+                <h1 id="headerNameText">Omer Katan</h1>
+            </div>
+
+            <!-- Blank Space -->
+            <div class="col-xl-4 col-lg-5 col-md-4 col-sm-3 col-3"></div>
+
+            <!-- Link box -->
+            <div id="linkSection" class="col-xl-2 col-lg-4 col-md-4 col-sm-6 col-6">
+                <div class="row">
+                    <!-- All the nav links and the text on the link -->
+                    <a id="aboutLink" href="index.html" class="col-4">
+                        <p id="aboutLinkText">About</p>
+                    </a>
+                    <a id="portfolioLink" href="portfolio.html" class="col-5">
+                        <p id="portfolioLinkText">Portfolio</p>
+                    </a>
+                    <a id="contactLink" href="contact.html" class="col-3">
+                        <p id="contactLinkText">Contact</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Blank Space -->
+            <div class="col-xl-2 col-lg-0 col-md-0 col-sm-3 col-3"></div>
+
+        </div>
+    </div>
+
+
+    <!-- Main Content Box container -->
+    <div id="pageContentBox-container" class="container-fluid">
+
+        <div class="row">
+
+            <!-- Blank Space -->
+            <div class="col-xl-2 col-0"></div>
+
+
+
+            <!-- Main Content Box (this is basically the parent div to everything inside it) -->
+            <div id="pageContentBox" class="col-xl-8 col-lg-7">
+
+                <div class="row">
+
+                    <!-- header of content box -->
+                    <div id="pageContentBox-header" class="col-12">
+                        <!-- The title text of the header -->
+                        <h1 id="pageContentBox-titleText">Contact</h1>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <!-- All the content inside the box -->
+                    <div id="pageContentBox-content" class="col-12">
+
+                        <!--Stores the user input into a certain file-->
+                    <form action="/action_page.php">
+                        <h3 class="formName">Name</h3>
+                        <input class="inputStyle" type="text" name="Name" placeholder=" Your Name" onfocus="this.placeholder = ''" onblur="this.placeholder=' Your Name'">
+                        <br><br><br>
+
+                        <h3 class="formName">Email</h3>
+                        <input class="inputStyle" type="text" name="Email" placeholder=" youremail@mail.com" onfocus="this.placeholder = ''" onblur="this.placeholder = ' youremail@mail.com'">
+                        <br><br><br>
+
+                        <h3 class="formName">Message</h3>
+                        <textarea name="message"></textarea>
+                        <br><br><br>
+
+                        <input id="contactSubmit" type="submit">
+
+
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Blank Space -->
+            <div class="col-xl-0 col-0"></div>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+
+</html>
